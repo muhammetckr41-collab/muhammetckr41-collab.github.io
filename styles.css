@@ -1,0 +1,358 @@
+/* =============================================
+   styles.css - Muhammet Ali Çakır
+   Main colors:
+     #222222  black
+     #2e8b57  emerald green
+     #f2f4f2  light gray
+   ============================================= */
+
+
+/* ---------- 1. Whole page ---------- */
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  color: #333333;
+}
+
+h1, h2, h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: normal;
+  color: #222222;
+}
+
+a {
+  color: #2e8b57;
+}
+
+/* Keeps the content in the middle of the page */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Space above and below every section */
+section {
+  padding: 60px 0;
+}
+
+/* Light gray background (every second section) */
+.light {
+  background-color: #f2f4f2;
+}
+
+/* Section titles with a green line on the left */
+h2 {
+  font-size: 34px;
+  margin: 0 0 30px 0;
+  padding-left: 14px;
+  border-left: 5px solid #2e8b57;
+}
+
+/* Ends the float, so the next content starts on a new line */
+.clear {
+  clear: both;
+}
+
+
+/* ---------- 2. Header ---------- */
+
+header {
+  background-color: #222222;
+  border-bottom: 1px solid #3a3a3a;
+  padding: 18px 0;
+}
+
+/* Name on the left */
+.logo {
+  float: left;
+  margin: 0;
+  color: #ffffff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 21px;
+}
+
+/* Menu on the right */
+nav {
+  float: right;
+  padding-top: 3px;
+}
+
+/* Each menu link has an invisible line under it (same color as the header) */
+nav a {
+  color: #dddddd;
+  text-decoration: none;
+  margin-left: 20px;
+  padding-bottom: 4px;
+  border-bottom: 2px solid #222222;
+}
+
+/* On mouse over, the text and the line under it turn light green */
+nav a:hover {
+  color: #9fd8b5;
+  border-bottom-color: #9fd8b5;
+}
+
+/* Language link (TR / EN) has a green border */
+nav a.lang {
+  border: 1px solid #2e8b57;
+  border-radius: 4px;
+  padding: 2px 9px;
+}
+
+
+/* ---------- 3. About Me (top of the page) ---------- */
+
+/* #about selects the element with id="about" (an id is used only once on a page) */
+#about {
+  background-color: #222222;
+  color: #dddddd;
+  padding: 50px 0 80px 0;
+}
+
+/* Round photo on the right.
+   padding + dark background make a gap between the photo and the green ring */
+.photo {
+  float: right;
+  width: 30%;
+  max-width: 230px;
+  padding: 6px;
+  background-color: #222222;
+  border: 3px solid #2e8b57;
+  border-radius: 50%;
+  margin-left: 30px;
+}
+
+#about h1 {
+  color: #ffffff;
+  font-size: 52px;
+  line-height: 1.2;
+  margin: 30px 0 5px 0;
+}
+
+#about strong {
+  color: #ffffff;
+}
+
+/* Job title with a short green line under it */
+.role {
+  display: inline-block;
+  color: #9fd8b5;
+  font-size: 21px;
+  margin: 0 0 18px 0;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #2e8b57;
+}
+
+
+/* ---------- 4. Buttons ---------- */
+
+.button {
+  display: inline-block;
+  background-color: #2e8b57;
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.2s;
+  padding: 11px 24px;
+  margin: 12px 10px 0 0;
+  border: 2px solid #2e8b57;
+  border-radius: 6px;
+}
+
+.button:hover {
+  background-color: #1f6b41;
+  border-color: #1f6b41;
+}
+
+/* Second button: dark inside, green border */
+.button-outline {
+  background-color: #222222;
+}
+
+
+/* ---------- 5. Entries (Education, Experience, Projects) ---------- */
+
+/* Each entry is a box with a green line on the left.
+   transition: changes on mouse over happen smoothly in 0.2 seconds */
+.item {
+  background-color: #f7f9f7;
+  border: 1px solid #d8ddd8;
+  border-left: 4px solid #2e8b57;
+  border-radius: 6px;
+  padding: 18px 24px;
+  margin-bottom: 18px;
+  transition: 0.2s;
+}
+
+/* Boxes inside gray sections are white, so they stand out */
+.light .item {
+  background-color: #ffffff;
+}
+
+/* On mouse over: the whole border turns green and a soft shadow appears
+   (shadow: 0 to the side, 6px down, 16px blur, light green-gray color) */
+.item:hover {
+  border-color: #2e8b57;
+  box-shadow: 0 6px 16px #dfe6e1;
+}
+
+.item h3 {
+  font-size: 22px;
+  margin: 0 0 2px 0;
+}
+
+.item p {
+  margin: 0 0 5px 0;
+}
+
+/* Place and date under each title */
+.meta {
+  color: #1f6b41;
+  font-size: 15px;
+}
+
+.item ul {
+  margin: 8px 0 0 0;
+  padding-left: 20px;
+}
+
+/* Small "School project" label next to a project name */
+.badge {
+  display: inline-block;
+  background-color: #e3f1e8;
+  color: #1f6b41;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 13px;
+  padding: 2px 10px;
+  margin-left: 8px;
+  border-radius: 12px;
+}
+
+
+/* "In development" label: yellow instead of green */
+.badge-dev {
+  background-color: #fdf1d8;
+  color: #8a5a00;
+}
+
+/* Game screenshot inside the project box */
+.game-shot {
+  margin: 14px 0 4px 0;
+}
+
+.game-shot img {
+  width: 100%;
+  border: 1px solid #d8ddd8;
+  border-radius: 6px;
+}
+
+.game-shot figcaption {
+  color: #666666;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+
+/* ---------- 6. Skills ---------- */
+
+/* Skills are in three groups, each with a small title */
+.skill-group {
+  margin-bottom: 20px;
+}
+
+.skill-group h3 {
+  font-size: 19px;
+  margin: 0 0 10px 0;
+}
+
+.tags {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Each skill looks like a small label */
+.tags li {
+  display: inline-block;
+  background-color: #ffffff;
+  color: #1f6b41;
+  border: 1px solid #b9d9c5;
+  border-radius: 20px;
+  padding: 6px 16px;
+  margin: 0 8px 10px 0;
+  transition: 0.2s;
+}
+
+/* When the mouse is on a skill, it turns green */
+.tags li:hover {
+  background-color: #2e8b57;
+  color: #ffffff;
+}
+
+
+/* ---------- 7. Contact ---------- */
+
+.contact-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Each contact line is a small white box, like the entries above */
+.contact-list li {
+  background-color: #ffffff;
+  border: 1px solid #d8ddd8;
+  border-left: 4px solid #2e8b57;
+  border-radius: 6px;
+  padding: 12px 20px;
+  margin-bottom: 10px;
+}
+
+.contact-list a {
+  text-decoration: none;
+}
+
+/* Same width for Email, LinkedIn and Location */
+.contact-list b {
+  display: inline-block;
+  width: 110px;
+  color: #222222;
+}
+
+
+/* ---------- 8. Download CV ---------- */
+
+/* #cv selects the Download CV section by its id */
+#cv {
+  background-color: #222222;
+  border-top: 4px solid #2e8b57;
+  color: #dddddd;
+  text-align: center;
+}
+
+/* Bigger buttons in the CV section */
+#cv .button {
+  padding: 13px 30px;
+}
+
+#cv h2 {
+  color: #ffffff;
+  border-left: none;
+  padding-left: 0;
+  margin-bottom: 10px;
+}
+
+
+/* ---------- 9. Footer ---------- */
+
+footer {
+  background-color: #151515;
+  color: #aaaaaa;
+  text-align: center;
+  font-size: 14px;
+  padding: 12px 0;
+}
